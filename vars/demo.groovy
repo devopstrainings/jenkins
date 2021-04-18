@@ -7,7 +7,7 @@ def call() {
             echo "The build number is even"
             script { 
               GroovyShell shell = new GroovyShell()
-              def prints = shell.parse(new File('common/prints.groovy'))
+              def prints = shell.parse(new File('./common/prints.groovy'))
               prints.info 'Starting'
               prints.warning 'Nothing to do!'
             }
