@@ -12,6 +12,7 @@ def call() {
               // GroovyShell shell = new GroovyShell()
               // def prints = shell.parse(new File('./common/prints.groovy'))
               // prints.info 'Starting'
+              thing = new prints()
               thing.warning 'Nothing to do!'
             }
           }
