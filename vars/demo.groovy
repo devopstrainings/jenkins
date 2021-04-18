@@ -7,8 +7,8 @@ def call() {
           steps {
             echo "The build number is even"
             script { 
-              prints.info 'Starting'
-              prints.warning 'Nothing to do!'
+              info 'Starting'
+              warning 'Nothing to do!'
             }
           }
         }
