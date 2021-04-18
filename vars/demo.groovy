@@ -1,11 +1,6 @@
-evaluate(new File("common/prints.groovy"))
-def info(message) {
-    echo "INFO: ${message}"
-}
-
-def warning(message) {
-    echo "WARNING: ${message}"
-}
+//evaluate(new File("common/prints.groovy"))
+GroovyShell shell = new GroovyShell()
+def prints = shell.parse(new File('common/prints.groovy'))
 
 
 def call() {
@@ -16,8 +11,8 @@ def call() {
           steps {
             echo "The build number is even"
             script { 
-              info 'Starting'
-              warning 'Nothing to do!'
+              prints.info 'Starting'
+              prints.warning 'Nothing to do!'
             }
           }
         }
