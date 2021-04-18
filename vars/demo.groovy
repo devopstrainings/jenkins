@@ -1,4 +1,4 @@
-import prints
+import common/prints.groovy
 def call() {
     pipeline {
       agent any
