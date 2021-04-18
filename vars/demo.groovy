@@ -1,4 +1,4 @@
-import common/prints.groovy
+evaluate(new File("common/prints.groovy"))
 def call() {
     pipeline {
       agent any
