@@ -1,8 +1,3 @@
-//evaluate(new File("common/prints.groovy"))
-GroovyShell shell = new GroovyShell()
-def prints = shell.parse(new File('common/prints.groovy'))
-
-
 def call() {
     pipeline {
       agent any
@@ -11,6 +6,8 @@ def call() {
           steps {
             echo "The build number is even"
             script { 
+              GroovyShell shell = new GroovyShell()
+              def prints = shell.parse(new File('common/prints.groovy'))
               prints.info 'Starting'
               prints.warning 'Nothing to do!'
             }
