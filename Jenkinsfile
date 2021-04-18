@@ -1,0 +1,2 @@
+@Library('sample') _
+demo()
